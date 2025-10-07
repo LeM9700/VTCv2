@@ -221,9 +221,9 @@
 @media (min-width: 415px) and (max-width: 760px) and (orientation: portrait) {
   :root {
     --rows: 4;
-    --cols: 3;
+    --cols: 4;
     --gap: 40px;
-    --icon-size: 95px;
+    --icon-size: 105px;
     --status-height: 64px;
     --dock-height: 110px;
     --container-padding: 24px;
