@@ -22,23 +22,16 @@ body {
   touch-action: pan-x pan-y;
 }
 
-.app {
+/* Styles supplémentaires pour l'interface iOS */
+html {
   width: 100%;
   height: 100%;
-  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .app {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 320px) {
-  .app {
-    padding: 5px;
-  }
 }

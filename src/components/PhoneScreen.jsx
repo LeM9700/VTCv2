@@ -117,44 +117,42 @@ const PhoneScreen = () => {
   const bars = renderSignalBars();
 
   return (
-    <div className="phone-frame">
-      <div className="phone-screen">
-        <div className="status-bar">
-          <div className="status-left">
-            <span className="time">{timeString}</span>
-          </div>
-          <div className="status-right">
-            <div className="battery-container">
-              <div className={`signal-svg`} aria-hidden>
-                {/* prefer SVG signal for consistent cross-browser rendering */}
-                <SignalBars level={bars.filter(Boolean).length} />
-              </div>
-              <div
-                className="network-text"
-                title={networkStatus.online ? `Réseau: ${networkStatus.type}` : 'Hors-ligne'}
-              >
-                {networkStatus.online
-                  ? (networkStatus.type ? networkStatus.type.toUpperCase() : (isIOS ? '—' : 'UNKNOWN'))
-                  : 'OFF'}
-              </div>
-                <div className={`battery-icon ${isIOS ? 'ios-fallback' : ''}`} aria-hidden>
-                  <BatteryIcon level={batteryLevel} charging={charging} />
-                </div>
-                <div
-                  className={`battery-text ${isIOS && batteryLevel === null ? 'ios-fallback' : ''}`}
-                  title={batteryLevel === null && isIOS ? 'Niveau batterie indisponible sur Safari iOS' : (batteryLevel === null ? 'Niveau batterie indisponible' : `${Math.round(batteryLevel*100)}%`) }
-                >
-                  {batteryLevel === null ? '--' : Math.round(batteryLevel * 100) + '%'}
-                  {charging && <span className="charging-icon"><ChargingIcon /></span>}
-                </div>
+    <div className="phone-screen">
+      <div className="status-bar">
+        <div className="status-left">
+          <span className="time">{timeString}</span>
+        </div>
+        <div className="status-right">
+          <div className="battery-container">
+            <div className={`signal-svg`} aria-hidden>
+              {/* prefer SVG signal for consistent cross-browser rendering */}
+              <SignalBars level={bars.filter(Boolean).length} />
+            </div>
+            <div
+              className="network-text"
+              title={networkStatus.online ? `Réseau: ${networkStatus.type}` : 'Hors-ligne'}
+            >
+              {networkStatus.online
+                ? (networkStatus.type ? networkStatus.type.toUpperCase() : (isIOS ? '—' : 'UNKNOWN'))
+                : 'OFF'}
+            </div>
+            <div className={`battery-icon ${isIOS ? 'ios-fallback' : ''}`} aria-hidden>
+              <BatteryIcon level={batteryLevel} charging={charging} />
+            </div>
+            <div
+              className={`battery-text ${isIOS && batteryLevel === null ? 'ios-fallback' : ''}`}
+              title={batteryLevel === null && isIOS ? 'Niveau batterie indisponible sur Safari iOS' : (batteryLevel === null ? 'Niveau batterie indisponible' : `${Math.round(batteryLevel*100)}%`) }
+            >
+              {batteryLevel === null ? '--' : Math.round(batteryLevel * 100) + '%'}
+              {charging && <span className="charging-icon"><ChargingIcon /></span>}
             </div>
           </div>
         </div>
-        
-        <HomeScreen />
-        
-        <div className="home-indicator"></div>
       </div>
+      
+      <HomeScreen />
+      
+      <div className="home-indicator"></div>
     </div>
   );
 };

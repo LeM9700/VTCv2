@@ -5,8 +5,8 @@
   --gap: 24px;
   --icon-size: 60px;
   --status-height: 64px;
-  --dock-height: 94px;
-  --container-padding: 20px;
+  --dock-height: 154px;
+  --container-padding: 50px;
 }
 
 .home-screen {

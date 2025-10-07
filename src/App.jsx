@@ -5,11 +5,7 @@ import './styles/iOS-effects.css';
 import './styles/responsive.css';
 
 function App() {
-  return (
-    <div className="app">
-      <PhoneScreen />
-    </div>
-  );
+  return <PhoneScreen />;
 }
 
 export default App
