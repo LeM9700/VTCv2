@@ -1,0 +1,25 @@
+.vtc-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  z-index: 1200;
+  pointer-events: none;
+}
+
+.vtc-toast-inner {
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+  animation: vtc-toast-in 0.32s forwards ease-out;
+}
+
+@keyframes vtc-toast-in {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

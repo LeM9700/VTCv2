@@ -1,0 +1,152 @@
+/* Styles globaux supplémentaires pour l'esthétique iOS */
+
+/* Animation d'apparition globale */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Effet de vibration tactile (simulation visuelle) */
+@keyframes vibrate {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  75% { transform: translateX(1px); }
+}
+
+/* Classes utilitaires pour les effets iOS */
+.ios-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.ios-shadow {
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ios-shadow-large {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet de reflet iOS sur les surfaces */
+.ios-reflection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    transparent 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Effet de pression pour tous les éléments interactifs */
+.ios-pressable {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.ios-pressable:active {
+  transform: scale(0.96);
+}
+
+/* Scrollbar personnalisée style iOS */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Support du mode sombre (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ios-primary-text: #ffffff;
+    --ios-secondary-text: #ebebf5;
+    --ios-tertiary-text: #ebebf599;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ios-primary-text: #000000;
+    --ios-secondary-text: #3c3c43;
+    --ios-tertiary-text: #3c3c4399;
+  }
+}
+
+/* Animations fluides pour les transitions de page */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+}
+
+/* Effets visuels pour les éléments en survol (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+  .app-icon:hover {
+    filter: brightness(1.1);
+  }
+  
+  .ios-pressable:hover {
+    filter: brightness(1.05);
+  }
+}
+
+/* Optimisations de performance */
+.hardware-accelerated {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Focus indicators pour l'accessibilité */
+.ios-focusable:focus {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* Support pour les écrans haute densité */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimized {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}

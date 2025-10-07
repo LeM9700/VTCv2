@@ -1,0 +1,400 @@
+/* Responsive optimizations for all screen sizes */
+
+/* Ultra large screens (4K, large monitors) */
+@media (min-width: 1920px) {
+  .phone-frame {
+    width: 425px;
+    height: 920px;
+    border-radius: 50px;
+    padding: 12px;
+  }
+  
+  .phone-screen {
+    border-radius: 38px;
+  }
+  
+  .status-bar {
+    padding: 16px 28px 12px;
+    font-size: 18px;
+  }
+  
+  .app-icon-background {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 32px;
+  }
+  
+  .app-name {
+    font-size: 14px;
+    max-width: 80px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .phone-frame {
+    width: 400px;
+    height: 850px;
+  }
+  
+  .app-icon-background {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 30px;
+  }
+}
+
+/* Standard desktop screens */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .phone-frame {
+    width: 375px;
+    height: 812px;
+  }
+}
+
+/* Tablets in landscape */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .phone-frame {
+    width: 350px;
+    height: 760px;
+  }
+  
+  .apps-grid {
+    max-width: 280px;
+    gap: 20px;
+  }
+  
+  .dock {
+    bottom: 25px;
+  }
+}
+
+/* Tablets in portrait */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .phone-frame {
+    width: 340px;
+    height: 740px;
+  }
+  
+  .home-screen {
+    padding: 16px 14px;
+  }
+  
+  .apps-container {
+    padding-top: 30px;
+  }
+}
+
+/* Large phones and small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  .phone-frame {
+    width: 320px;
+    height: 690px;
+    border-radius: 28px;
+    padding: 6px;
+  }
+  
+  .phone-screen {
+    border-radius: 22px;
+  }
+  
+  .status-bar {
+    padding: 8px 18px 6px;
+    font-size: 15px;
+  }
+  
+  .apps-grid {
+    max-width: 260px;
+    gap: 18px;
+  }
+  
+  .app-icon-background {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 25px;
+  }
+  
+  .app-name {
+    font-size: 11px;
+    max-width: 60px;
+  }
+  
+  .dock {
+    bottom: 25px;
+    padding: 8px 12px;
+  }
+  
+  .dock-apps {
+    gap: 12px;
+  }
+  
+  .app-icon--dock .app-icon-background {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .app-icon--dock .app-icon-symbol {
+    font-size: 21px;
+  }
+}
+
+/* Standard mobile phones */
+@media (max-width: 480px) {
+  .app {
+    padding: 5px;
+  }
+  
+  .phone-frame {
+    width: min(320px, 95vw);
+    height: min(690px, 85vh);
+    border-radius: 25px;
+    padding: 5px;
+  }
+  
+  .phone-screen {
+    border-radius: 20px;
+  }
+  
+  .status-bar {
+    padding: 8px 16px 5px;
+    font-size: 14px;
+  }
+  
+  .home-screen {
+    padding: 14px 12px;
+  }
+  
+  .apps-container {
+    padding-top: 25px;
+  }
+  
+  .apps-grid {
+    max-width: 240px;
+    gap: 16px;
+  }
+  
+  .app-icon-background {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 23px;
+  }
+  
+  .app-name {
+    font-size: 10px;
+    max-width: 55px;
+  }
+  
+  .dock {
+    bottom: 20px;
+    padding: 6px 10px;
+    border-radius: 20px;
+  }
+  
+  .dock-apps {
+    gap: 10px;
+  }
+  
+  .app-icon--dock .app-icon-background {
+    width: 46px;
+    height: 46px;
+  }
+  
+  .app-icon--dock .app-icon-symbol {
+    font-size: 20px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 360px) {
+  .phone-frame {
+    width: min(300px, 95vw);
+    height: min(650px, 85vh);
+    border-radius: 22px;
+  }
+  
+  .apps-grid {
+    max-width: 220px;
+    gap: 14px;
+  }
+  
+  .app-icon-background {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 21px;
+  }
+  
+  .app-name {
+    font-size: 9px;
+    max-width: 50px;
+  }
+  
+  .dock-apps {
+    gap: 8px;
+  }
+  
+  .app-icon--dock .app-icon-background {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+  }
+  
+  .app-icon--dock .app-icon-symbol {
+    font-size: 18px;
+  }
+}
+
+/* Very small screens (old phones) */
+@media (max-width: 320px) {
+  .phone-frame {
+    width: 95vw;
+    height: 80vh;
+    border-radius: 18px;
+    padding: 4px;
+  }
+  
+  .phone-screen {
+    border-radius: 14px;
+  }
+  
+  .status-bar {
+    padding: 6px 12px 4px;
+    font-size: 12px;
+  }
+  
+  .apps-grid {
+    max-width: 200px;
+    gap: 12px;
+  }
+  
+  .app-icon-background {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .app-icon-symbol {
+    font-size: 19px;
+  }
+  
+  .app-name {
+    font-size: 8px;
+    max-width: 45px;
+  }
+  
+  .dock {
+    bottom: 15px;
+    padding: 5px 8px;
+  }
+  
+  .dock-apps {
+    gap: 6px;
+  }
+  
+  .app-icon--dock .app-icon-background {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .app-icon--dock .app-icon-symbol {
+    font-size: 16px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .phone-frame {
+    height: 95vh;
+    width: auto;
+    aspect-ratio: 375/812;
+  }
+  
+  .apps-container {
+    padding-top: 15px;
+  }
+  
+  .dock {
+    bottom: 10px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .app-icon-background {
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.2),
+      0 1px 2px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .phone-frame {
+    box-shadow: 
+      0 0 0 0.5px rgba(255, 255, 255, 0.1),
+      0 15px 35px rgba(0, 0, 0, 0.35),
+      0 5px 15px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .apps-grid,
+  .dock {
+    animation: none;
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  .phone-screen {
+    background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%);
+  }
+  
+  .status-bar {
+    color: #ffffff;
+  }
+  
+  .app-name {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-contrast: high) {
+  .app-icon-background {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .dock {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Print styles (hide interface) */
+@media print {
+  .phone-container {
+    display: none;
+  }
+}
