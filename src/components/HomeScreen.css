@@ -1,12 +1,12 @@
 :root {
   /* Variables pour grille iOS */
-  --rows: 4;
-  --cols: 3;
+  --rows: 3;
+  --cols: 4;
   --gap: 32px;
-  --icon-size: 80px;
+  --icon-size: 120px;
   --status-height: 64px;
-  --dock-height: 154px;
-  --container-padding: 50px;
+  --dock-height: 54px;
+  --container-padding: 30px;
 }
 
 .home-screen {
@@ -218,14 +218,24 @@
 }
 
 /* Grands écrans iPhone Pro Max, Android flagships */
-@media (min-width: 415px) and (orientation: portrait) {
+@media (min-width: 415px) and (max-width: 760px) and (orientation: portrait) {
+  :root {
+    --rows: 4;
+    --cols: 3;
+    --gap: 40px;
+    --icon-size: 95px;
+    --status-height: 64px;
+    --dock-height: 110px;
+    --container-padding: 24px;
+  }
+  
   .apps-container {
     padding: 45px 24px 0;
   }
   
   .apps-grid {
-    gap: 36px;
-    max-width: 360px;
+    gap: var(--gap);
+    max-width: calc(var(--cols) * (var(--icon-size) + var(--gap)) + var(--gap));
   }
   
   .dock {
