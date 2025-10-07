@@ -2,8 +2,8 @@
   /* Variables pour grille iOS */
   --rows: 4;
   --cols: 3;
-  --gap: 24px;
-  --icon-size: 60px;
+  --gap: 32px;
+  --icon-size: 80px;
   --status-height: 64px;
   --dock-height: 154px;
   --container-padding: 50px;
@@ -177,8 +177,8 @@
   :root {
     --rows: 4;
     --cols: 3;
-    --gap: 18px;
-    --icon-size: 56px;
+    --gap: 24px;
+    --icon-size: 70px;
     --status-height: 60px;
     --dock-height: 84px;
     --container-padding: 16px;
@@ -200,8 +200,8 @@
   :root {
     --rows: 4;
     --cols: 3;
-    --gap: 26px;
-    --icon-size: 62px;
+    --gap: 30px;
+    --icon-size: 76px;
     --status-height: 64px;
     --dock-height: 92px;
     --container-padding: 18px;

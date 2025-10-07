@@ -27,10 +27,10 @@
 }
 
 .app-icon-background {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background: var(--app-color);
-  border-radius: 18px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@
 }
 
 .app-icon-symbol {
-  font-size: 32px;
+  font-size: 40px;
   z-index: 2;
   position: relative;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
@@ -87,13 +87,13 @@
 
 .app-name {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   text-shadow: 
     0 1px 3px rgba(0, 0, 0, 0.8),
     0 0 6px rgba(0, 0, 0, 0.3);
-  max-width: 80px;
+  max-width: 90px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -102,9 +102,9 @@
 
 /* Styles pour le dock */
 .app-icon--dock .app-icon-background {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
   box-shadow: 
     0 6px 20px rgba(0, 0, 0, 0.35),
     0 3px 8px rgba(0, 0, 0, 0.25),
@@ -113,7 +113,7 @@
 }
 
 .app-icon--dock .app-icon-symbol {
-  font-size: 28px;
+  font-size: 36px;
 }
 
 .app-icon--dock:hover {
@@ -169,41 +169,41 @@
 /* Responsive */
 @media (max-width: 480px) {
   .app-icon-background {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
   }
   
   .app-icon-symbol {
-    font-size: 26px;
+    font-size: 34px;
   }
   
   .app-name {
-    font-size: 11px;
-    max-width: 65px;
+    font-size: 12px;
+    max-width: 75px;
   }
   
   .app-icon--dock .app-icon-background {
-    width: 50px;
-    height: 50px;
+    width: 64px;
+    height: 64px;
   }
   
   .app-icon--dock .app-icon-symbol {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 360px) {
   .app-icon-background {
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    height: 64px;
   }
   
   .app-icon-symbol {
-    font-size: 24px;
+    font-size: 30px;
   }
   
   .app-name {
-    font-size: 10px;
-    max-width: 60px;
+    font-size: 11px;
+    max-width: 70px;
   }
 }
